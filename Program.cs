@@ -17,7 +17,7 @@ namespace Homework1_VillageNameLength {
 
             //Read all lines of telepulesek.txt
             string[] lines = System.IO.File.ReadAllLines
-            (@"Y:\Visual Studio for C#\Projects\Homework1-VillageNameLength\telepulesek.txt");
+            (@"C:\Visual Studio for C#\Projects\C-Homework-Projects\telepulesek.txt");
 
             //Foreach line in telepulesek.txt:
             foreach (string line in lines)
@@ -40,11 +40,11 @@ namespace Homework1_VillageNameLength {
                     Console.WriteLine("\t" + line + "   " + name.Length);
 
                     //Write line to output file
-                    File.AppendAllText(@"Y:\Visual Studio for C#\Projects\Homework1-VillageNameLength\LongNameVillages.txt", "\t" + line + "   " + name.Length + Environment.NewLine);
+                    File.AppendAllText(@"C:\Visual Studio for C#\Projects\C-Homework-Projects\LongNameVillages.txt", "\t" + line + "   " + name.Length + Environment.NewLine);
                 }
             }
             //Write to the file the amount of Long Name Villages out of Total Villages
-            File.AppendAllText(@"Y:\Visual Studio for C#\Projects\Homework1-VillageNameLength\LongNameVillages.txt", "The amount of villages with names longer than eight characters is " + LongNameVillageCounter + " villages out of " + TotalVillageCounter + " total villages.");
+            File.AppendAllText(@"C:\Visual Studio for C#\Projects\C-Homework-Projects\LongNameVillages.txt", "The amount of villages with names longer than eight characters is " + LongNameVillageCounter + " villages out of " + TotalVillageCounter + " total villages.");
 
             //Write to the console the amount of Long Name Villages out of Total Villages
             Console.WriteLine("The amount of villages with names longer than eight characters is " + LongNameVillageCounter + " villages out of " + TotalVillageCounter + " total villages.");
