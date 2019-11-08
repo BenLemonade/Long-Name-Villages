@@ -20,7 +20,7 @@ namespace Homework1_VillageNameLength {
             (@"C:\Visual Studio for C#\Projects\C-Homework-Projects\telepulesek.txt");
             
             //Clear the LongNameVillages.txt file of any text.
-            File.WriteAllText(@"Y:\Visual Studio for C#\Projects\Homework1-VillageNameLength\LongNameVillages.txt", String.Empty);
+            File.WriteAllText(@"C:\Visual Studio for C#\Projects\C-Homework-Projects\LongNameVillages.txt", String.Empty);
 
             //Foreach line in telepulesek.txt:
             foreach (string line in lines)
