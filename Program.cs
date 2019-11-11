@@ -52,6 +52,33 @@ namespace Homework1_VillageNameLength {
             //Write to the console the amount of Long Name Villages out of Total Villages
             Console.WriteLine("The amount of villages with names longer than eight characters is " + LongNameVillageCounter + " villages out of " + TotalVillageCounter + " total villages.");
 
+            //Read in the lines from telepulesek.txt again.
+            lines = System.IO.File.ReadAllLines(@"C:\Visual Studio for C#\Projects\C-Homework-Projects\telepulesek.txt");
+            
+            //Use the lines to create a dictionary, with the village name lengths as categories.
+            Dictionary<int, List<string>> VillageDictionary = new Dictionary<int, List<string>>();
+            
+            //Foreach line from telepulesek:
+            foreach (string line in lines)
+            {
+                //If "Village Dictionary" doesn't contain new length/category:
+                If (!VillageDictionary.ContainsKey(line.Length));
+                {
+                    //Add to "Village Dictionary" the new length as a key/category.
+                    VillageDictionary.Add(line.Length, new List<string>());
+                }
+                //Else add to the appropriate key/category count (++).
+                VillageDictionary[line.Length].Add(line);
+            }
+            
+            //Foreach key in "Village Dictionary's" keys:
+            foreach (int key in VillageDictionary.Keys)
+            {
+                //Write to the console the key name + the number count of that key.
+                Console.WriteLine(key + ": " + VillageDictionary[key].Count);
+            }
+            Console.ReadKey();
+            
             //Keep console open with prompt to press any key to exit
             Console.WriteLine("Press any Key to Exit");
             System.Console.ReadKey(true);
